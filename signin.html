@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>로그인</title>
+    <style>
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            width: 600px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+        }
+
+        input[type=text],
+        input[type=password],
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 4px;
+
+            resize: vertical;
+
+        }
+
+        label {
+
+            padding: 12px 12px 12px 0;
+
+            display: inline-block;
+
+        }
+
+        input[type=submit],
+        button[type=button] {
+
+            background-color: #4CAF50;
+
+            color: white;
+
+            padding: 12px 20px;
+
+            border: 10px;
+
+            border-radius: 10px;
+
+            margin: 4px;
+
+            cursor: pointer;
+
+            float: right;
+
+        }
+
+        input[type=submit]:hover,
+        button:hover {
+
+            background-color: #45a049;
+
+        }
+
+        .container {
+
+            border-radius: 5px;
+
+            background-color: #f2f2f2;
+
+            padding: 20px;
+
+        }
+
+        .col-25 {
+
+            float: left;
+
+            width: 25%;
+
+            margin-top: 6px;
+
+        }
+
+        .col-75 {
+
+            float: left;
+
+            width: 75%;
+
+            margin-top: 6px;
+
+        }
+
+        .row:after {
+
+            content: "";
+
+            display: table;
+
+            clear: both;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>로그인</h2>
+    <hr>
+    <div class="container">
+        <form action="signin.php" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">아이디</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" required name="uid" placeholder="User id.." id="fname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="userpwd">비밀번호</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" required name="pwd" placeholder="Password.." id="userpwd">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="로그인">
+                <button type="button" onclick="location.href='index.php'">메인화면</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
